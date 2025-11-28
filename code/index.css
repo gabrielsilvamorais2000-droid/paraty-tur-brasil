@@ -1,0 +1,116 @@
+/* ======================= GLOBAL ======================= */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #1e88bd, #79a5f2, #616261);
+    background-size: 300% 300%;
+    animation: fundo 10s infinite ease;
+    color: #fff;
+}
+
+@keyframes fundo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    text-align: center;
+    padding: 35px;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+/* ======================= GRID DE DESTINOS ======================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.45);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+/* ======================= FORM CADASTRO ======================= */
+#cadastro, #orcamento {
+    display: none;
+    background: rgba(0,0,0,0.45);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 550px;
+    border-radius: 15px;
+}
+
+label { 
+    display: block; 
+    margin-top: 12px; 
+    font-weight: bold; 
+}
+
+input, select { 
+    width: 100%; 
+    padding: 12px; 
+    border-radius: 10px; 
+    border: none; 
+    margin-top: 6px; 
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    background: gold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+
+/* ======================= FOOTER ESTILIZADO ======================= */
+
+.site-footer {
+    background: linear-gradient(135deg, #0a2a43, #064663);
+    color: #ffffff;
+    padding: 50px 20px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 40px;
+    border-top: 4px solid #1e90ff;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+}
+
