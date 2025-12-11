@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paraty Tours Brasil - Transporte Turístico</title>
+ <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .card img{
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->+<header>
+    <div class="navbar navbar-dark bg-dark box-shadow mb-4">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <strong>Paraty Tours Brasil</strong>
+            </a>
+        </div>
+    </div> 
+</header>
+
+<!-- ================= JUMBOTRON ================= -->
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Transporte Turístico</h1>
+        <p class="lead text-muted">
+            Escolha seu destino e faça seu agendamento rapidamente com conforto e segurança.
+        </p>
+    </div>
+</section>
+
+<!-- ================= CARDS DESTINOS ================= -->
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow" onclick="abrirCadastro('Paraty - RJ')">
+                    <img src="paraty.png.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Paraty - RJ</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow" onclick="abrirCadastro('Rio de Janeiro - RJ')">
+                    <img src="RIO DE JANEIRO.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Rio de Janeiro - RJ</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow" onclick="abrirCadastro('Conceição de Jacareí - RJ')">
+                    <img src="JACAREI.jpeg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Conceição de Jacareí - RJ</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow" onclick="abrirCadastro('Mangaratiba - RJ')">
+                    <img src="MARATINGA.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mangaratiba - RJ</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow" onclick="abrirCadastro('Angra dos Reis - RJ')">
+                    <img src="ANGRA.jpeg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Angra dos Reis - RJ</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow" onclick="abrirCadastro('Ubatuba - SP')">
+                    <img src="Ubatuba-Melhores-Praias-2.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ubatuba - SP</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ================= MODAL CADASTRO ================= -->
+<div class="modal fade" id="modalCadastro" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Orçamento</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+        <label>Origem</label>
+        <input id="origem" type="text" class="form-control mb-3" placeholder="Ex: Paraty - RJ">
+
+        <label>Destino Escolhido</label>
+        <input id="destino" class="form-control mb-3" disabled>
+
+        <label>Nome</label>
+        <input id="nome" type="text" class="form-control mb-3">
+
+        <label>Data da Viagem</label>
+        <input id="data" type="date" class="form-control mb-3">
+
+        <label>Quantas pessoas?</label>
+        <input id="pessoas" type="number" min="1" class="form-control mb-3">
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-success" onclick="finalizar()">Finalizar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- SOBRE / QUEM SOMOS -->
+            <div class="col-md-6 mb-4">
+                <h4 class="text-warning">Quem Somos</h4>
+                <p class="text-justify">
+                    A Paraty Tur Brasil é uma empresa especializada em transporte turístico, fundada em 2014,
+                    oferecendo excelência, segurança, conforto e atendimento diferenciado. Atuamos em toda
+                    a Costa Verde, Rio de Janeiro, Angra dos Reis, Mangaratiba, Conceição de Jacareí,
+                    Paraty e até Ubatuba – SP.
+                </p>
+            </div>
+
+            <!-- CONTATO -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-warning">Contato</h5>
+                <p class="mb-1">📞 <a href="https://wa.me/5524999182772" target="_blank" class="text-light"> (24) 99918-2772</a></p>
+                <p class="mb-1">📧 paratyturbrasil@gmail.com</p>
+                <p class="mb-1">📍 Paraty - RJ</p>
+            </div>
+
+            <!-- REDES SOCIAIS -->
+            <div class="col-md-3 mb-4">
+                <h5 class="text-warning">Redes Sociais</h5>
+                <p><a href="#" class="text-light">📸 Instagram: @paratyturbrasil</a></p>
+                <p><a href="#" class="text-light">📘 Facebook: Paraty Tur Brasil</a></p>
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center">
+            <p class="mb-0">© 2014 - 2025 Paraty Tur Brasil • Todos os direitos reservados.</p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+function abrirCadastro(destino) {
+    document.getElementById("destino").value = destino;
+    $("#modalCadastro").modal("show");
+}
+
+// ENVIO PARA WHATSAPP
+function finalizar() {
+
+    const numeroWhatsApp = "5524999182772";
+
+    const nome = document.getElementById("nome").value;
+    const origem = document.getElementById("origem").value;
+    const destino = document.getElementById("destino").value;
+    const pessoas = document.getElementById("pessoas").value;
+    const data = document.getElementById("data").value;
+
+    const mensagem = 
+`Olá! Quero fazer um orçamento.
+
+Nome: ${nome}
+Origem: ${origem}
+Destino: ${destino}
+Data da Viagem: ${data}
+
+Passageiros: ${pessoas}
+
+Aguardo retorno, obrigado!`;
+
+    const texto = encodeURIComponent(mensagem);
+
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, "_blank");
+}
+</script>
+
+</body>
+
+
+</html>
