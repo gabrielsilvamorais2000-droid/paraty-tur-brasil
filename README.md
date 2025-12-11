@@ -1,1 +1,1 @@
-# paraty-tur-brasil
+# paraty-tours-brasil
